@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 위치가 바뀌면ㅁ 안됨. hquery가 반드시 먼저 로딩되어야함  -->
+
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- jquery를 로딩 후 bxslider가 로딩되어야함 -->
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+            overflow: hidden;
+            position: fixed;
+            display: block;
+            float: left;
+            border: none;
+            background-color: black;  
+            z-index: 999;
+        }
+
+        nav li {
+            border: none;
+            overflow: hidden;
+            margin-left: 10px;
+            display: block;
+            float: left;
+            text-decoration: none;
+            list-style-type: none;
+            padding: 12px;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        nav li:hover {
+            background-color: rgba(211, 211, 211, 0.541);
+        }
+
+        nav .drop {
+            position: relative;
+            display: inline-block
+        }
+
+        .dropcontant {
+            display: none;
+            position: relative;
+            background-color: rgba(211, 211, 211, 0.541);
+            padding: 12px;
+            margin-left: 10px;
+        }
+        nav .drop:hover .dropcontant {
+            display: block;
+        }
+        nav .icon {
+            float: right;
+        }
+
+        nav .icon:hover {
+            background-color:rgba(255, 0, 0, 0.37);
+        }
+        
+        .slider > li img {
+            border: 0.1px solid black;
+        }
+
+        article {
+            margin: auto;
+            width: 800px;
+            text-align: center;
+        }
+
+        .art1 h2 {
+            font-size: 34px;
+            font-weight: lighter;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .art1 h3 {
+            font-size: 14px;
+            color: rgba(182, 181, 181, 0.952);
+        }
+
+        .art1 p {
+            text-align: justify!important;
+            margin: 15px;
+            font-size: 14px;
+        }
+
+        .band {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .band li {
+            width: 33.3%;
+            display: block;
+            float: left;
+        }
+        .band p {
+            padding: 15px;
+        }
+
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .art2 {
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+
+    </style>
+     <script>
+        $(document).ready(function(){
+        $('.slider').bxSlider({
+              auto: true, // 이미지 전환이 자동으로 변경
+              speed:500, // 이미지 전환 속도 1/1000초
+              pause: 4000, //이미지가 전환된 후 잠시 움직임을 고정하는 시간
+              mode: "fade", // 이미지가 전환되는 효과, 'fade', 'horizontal', vertical 3가지가 존재함
+              pager: '', // 이미지 전환 인디케이터 사용
+              controls: null,
+          });
+        });
+      </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>BAND</li>
+                <li>TOUR</li>
+                <li>CONTACT</li>
+                <li class="drop"> MORE (드롭다운사용)
+                    <div class="dropcontant">
+                    <p>Merchandise</p>
+                    <p>Extras</p>
+                    <p>Media</p>
+                    </div>
+                </li>
+                <li class="icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <ul class="slider">
+                <li><img src="./chicago.jpg" alt="" width="100%"></li>
+                <li><img src="./la.jpg" alt="" width="100%"></li>
+                <li><img src="./ny.jpg" alt="" width="100%"></li>
+            </ul>
+        </section>
+
+        <article>
+            <div class="art1">
+            <h2>THE BAND</h2>
+            <h3>We love music</h3>
+            <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </article>
+        <br>
+        <article>
+            <ul class="band">
+               <li><p>name</p><img src="./bandmember.jpg" alt="" width="60%"></li>
+                <li><p>name</p><img src="./bandmember.jpg" alt=""width="60%"></li>
+                <li><p>name</p><img src="./bandmember.jpg" alt=""width="60%"></li>
+            </ul>
+        </article>
+        <br>
+        <article>
+            <div class="art2">
+                <div>
+                    <h2>TOUR DATES</h2>
+                    <h3>Remember to book your tickets!</h3>
+                </div>
+                <div>
+                    <p>September<span>Sold out</span></p>
+                    <p>October<span>Sold out</span></p>
+                    <p>November</p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li> <img src="" alt=""> </li>
+                        <li>New York</li>
+                        <li>Fri 27 Nov 2016</li>
+                        <li>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</li>
+                        <li><button>Buy Tickets</button></li>
+                    </ul>
+                    <ul>
+                        <li> <img src="" alt=""> </li>
+                        <li>New York</li>
+                        <li>Fri 27 Nov 2016</li>
+                        <li>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</li>
+                        <li><button>Buy Tickets</button></li>
+                    </ul>
+                    <ul>
+                        <li> <img src="" alt=""> </li>
+                        <li>New York</li>
+                        <li>Fri 27 Nov 2016</li>
+                        <li>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</li>
+                        <li><button>Buy Tickets</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2>CONTACT</h2>
+                <h3>Fan? Drop a note!</h3>
+                <ul>
+                    <li>아이콘 Chicago, US </li>
+                    <li>아이콘 Phone: +00 151515 </li>
+                    <li>아이콘 Email: mail@mail.com </li>
+                </ul>
+                <ul>
+                    <li><input type="text" value="name"></li>
+                    <li><input type="text" value="Email"></li>
+                    <li><input type="text" value="Message"></li>
+                    <li><button>SEND</button></li>
+                </ul>
+            </div>
+
+            <div>
+                <img src="" alt="지도">
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+        <div>
+            <p>Powered by <span><a href="w3.css">w3.css</a></span></p>
+        </div>
+     </footer>
+    
+</body>
+</html>

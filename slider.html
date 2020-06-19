@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이더 테스트</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 위치가 바뀌면ㅁ 안됨. hquery가 반드시 먼저 로딩되어야함  -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- jquery를 로딩 후 bxslider가 로딩되어야함 -->
+
+    <script>
+        // 기본적인 bxslider 사용법
+        $(document).ready(function(){
+          $('.slider').bxSlider();
+
+        //   bxslider 2개 이상 사용하가ㅣ
+        // 슬라이더를 사ㅏ용할 클래스의 이름을 바꿔서 사용하면 됨
+          $('.slider2').bxSlider();
+
+        //  bxslider의 기능 옵션
+          $('.slider3').bxSlider({
+              auto: true, // 이미지 전환이 자동으로 변경
+              speed:500, // 이미지 전환 속도 1/1000초
+              pause: 4000, //이미지가 전환된 후 잠시 움직임을 고정하는 시간
+              mode: "fade", // 이미지가 전환되는 효과, 'fade', 'horizontal', vertical 3가지가 존재함
+              autoControls: true, // 이미지 전환 효과 버튼 출력
+              pager: true // 이미지 전환 인디케이터 사용
+          });
+        });
+
+      </script>
+      
+      <style>
+          li > img {
+              width: 100%;
+              height: 100%;
+          }
+      </style>
+
+</head>
+<body>
+    <div>
+        <ul class="slider">
+            <li>
+                <img src="./peng10.jpg" alt="">
+            </li>
+            <li>
+                <img src="peng3.jpg" alt="">
+            </li>
+            <li>
+                <img src="./peng4.jpg" alt="">
+            </li>
+        </ul>
+
+        <br>
+
+        <ul class="slider2">
+            <li><img src="./윌5.jpg" alt=""></li>
+            <li><img src="./윌6.jpg" alt=""></li>
+            <li><img src="./윌8.jpg" alt=""></li>
+        </ul>
+
+        <br>
+
+        <ul class="slider3">
+            <li><img src="./윌5.jpg" alt=""></li>
+            <li><img src="./윌6.jpg" alt=""></li>
+            <li><img src="./윌8.jpg" alt=""></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
